@@ -23,4 +23,5 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'file-manage', 'as' => 'file-manage.'], function(){
     Route::get('/', ['as' => 'index', 'uses' => 'FileManageController@index']);
+    Route::post('/uploadcontent', ['as' => 'uploadcontent', 'uses' => 'FileManageController@uploadContent']);
 });
